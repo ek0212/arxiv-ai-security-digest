@@ -1,0 +1,52 @@
+name: Daily AI Security ArXiv Digest
+
+on:
+  schedule:
+    # Runs at 8:00 AM UTC every day
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Manual trigger
+
+# Grant write permissions for GitHub Pages deployment
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch papers and generate site
+        env:
+          LOOKBACK_DAYS: '7'
+          MAX_RESULTS: '50'
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          SITE_TITLE: "AI Security Research Digest"
+          # Optional: Buttondown newsletter (free, 100 subscribers)
+          # Sign up at https://buttondown.com and add your API key as a secret
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python fetch_papers.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seen_papers.json
+          git diff --cached --quiet || git commit -m "Daily digest $(date -u +%Y-%m-%d) [skip ci]"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          keep_files: true

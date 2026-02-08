@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Security Research Digest</title>
+    <link>https://ek0212.github.io/arxiv-ai-security-digest</link>
+    <description>Daily digest of ArXiv papers on AI security, red/blue teaming, prompt injection, jailbreaking, model poisoning, network security, and OS security. Sorted by citation count.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Feb 2026 20:45:02 +0000</lastBuildDate>
+    <atom:link href="https://ek0212.github.io/arxiv-ai-security-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] [2 citations] Self-Portrait of the Focusing Process in Speckle: I. Spatio-Temporal Imaging of Wave Packets in Complex Media</title>
+      <link>https://arxiv.org/abs/2602.05907v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05907v1</guid>
+      <description>This is the first article in a series of three dealing with the exploitation of speckle for imaging purposes. Speckle is the complex interference wave-field produced by a random distribution of un-resolved scatterers. In this paper, we show how these scatterers can be used as virtual microphones to ...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] [1 citations] Orthogonal Superposition Rheometry of soft core-shell microgels</title>
+      <link>https://arxiv.org/abs/2602.05752v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05752v1</guid>
+      <description>The mechanisms of flow in suspensions of soft particles above the glass-transition volume fraction and in the jammed state were probed using Orthogonal Superposition Rheometry (OSR). A small amplitude oscillatory shear flow is superimposed orthogonally onto a steady shear flow, which allows monitori...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] EuroLLM-22B: Technical Report</title>
+      <link>https://arxiv.org/abs/2602.05879v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05879v1</guid>
+      <description>This report presents EuroLLM-22B, a large language model trained from scratch to support the needs of European citizens by covering all 24 official European Union languages and 11 additional languages. EuroLLM addresses the issue of European languages being underrepresented and underserved in existi...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Graph-based Agent Memory: Taxonomy, Techniques, and Applications</title>
+      <link>https://arxiv.org/abs/2602.05665v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05665v1</guid>
+      <description>Memory emerges as the core module in the Large Language Model (LLM)-based agents for long-horizon complex tasks (e.g., multi-turn dialogue, game playing, scientific discovery), where memory can enable knowledge accumulation, iterative reasoning and self-evolution. Among diverse paradigms, graph stan...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Long-term timing of the relativistic binary PSR J1906+0746</title>
+      <link>https://arxiv.org/abs/2602.05947v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05947v1</guid>
+      <description>We conducted a timing analysis of over 18 years of data on the young ($τ_{\rm c} = 112$ kyr, $P = 114$\,ms) relativistic binary PSR~J1906+0746, using six radio telescopes: Arecibo, FAST, Green Bank, Lovell, MeerKAT, and Nançay. This pulsar is known to orbit a compact high-mass companion with a perio...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference</title>
+      <link>https://arxiv.org/abs/2602.05853v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05853v1</guid>
+      <description>The quadratic complexity of attention mechanisms poses a critical bottleneck for large language models processing long contexts. While dynamic sparse attention methods offer input-adaptive efficiency, they face fundamental trade-offs: requiring preprocessing, lacking global evaluation, violating que...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] MedErrBench: A Fine-Grained Multilingual Benchmark for Medical Error Detection and Correction with Clinical Expert Annotations</title>
+      <link>https://arxiv.org/abs/2602.05692v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05692v1</guid>
+      <description>Inaccuracies in existing or generated clinical text may lead to serious adverse consequences, especially if it is a misdiagnosis or incorrect treatment suggestion. With Large Language Models (LLMs) increasingly being used across diverse healthcare applications, comprehensive evaluation through dedic...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] SwimBird: Eliciting Switchable Reasoning Mode in Hybrid Autoregressive MLLMs</title>
+      <link>https://arxiv.org/abs/2602.06040v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.06040v1</guid>
+      <description>Multimodal Large Language Models (MLLMs) have made remarkable progress in multimodal perception and reasoning by bridging vision and language. However, most existing MLLMs perform reasoning primarily with textual CoT, which limits their effectiveness on vision-intensive tasks. Recent approaches inje...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Layer-wise LoRA fine-tuning: a similarity metric approach</title>
+      <link>https://arxiv.org/abs/2602.05988v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05988v1</guid>
+      <description>Pre-training Large Language Models (LLMs) on web-scale datasets becomes fundamental for advancing general-purpose AI. In contrast, enhancing their predictive performance on downstream tasks typically involves adapting their knowledge through fine-tuning. Parameter-efficient fine-tuning techniques, s...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] CSRv2: Unlocking Ultra-Sparse Embeddings</title>
+      <link>https://arxiv.org/abs/2602.05735v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05735v1</guid>
+      <description>In the era of large foundation models, the quality of embeddings has become a central determinant of downstream task performance and overall system capability. Yet widely used dense embeddings are often extremely high-dimensional, incurring substantial costs in storage, memory, and inference latency...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Dr. Kernel: Reinforcement Learning Done Right for Triton Kernel Generations</title>
+      <link>https://arxiv.org/abs/2602.05885v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05885v1</guid>
+      <description>High-quality kernel is critical for scalable AI systems, and enabling LLMs to generate such code would advance AI development. However, training LLMs for this task requires sufficient data, a robust environment, and the process is often vulnerable to reward hacking and lazy optimization. In these ca...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Balancing FP8 Computation Accuracy and Efficiency on Digital CIM via Shift-Aware On-the-fly Aligned-Mantissa Bitwidth Prediction</title>
+      <link>https://arxiv.org/abs/2602.05743v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05743v1</guid>
+      <description>FP8 low-precision formats have gained significant adoption in Transformer inference and training. However, existing digital compute-in-memory (DCIM) architectures face challenges in supporting variable FP8 aligned-mantissa bitwidths, as unified alignment strategies and fixed-precision multiply-accum...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Neural Implicit 3D Cardiac Shape Reconstruction from Sparse CT Angiography Slices Mimicking 2D Transthoracic Echocardiography Views</title>
+      <link>https://arxiv.org/abs/2602.05884v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05884v1</guid>
+      <description>Accurate 3D representations of cardiac structures allow quantitative analysis of anatomy and function. In this work, we propose a method for reconstructing complete 3D cardiac shapes from segmentations of sparse planes in CT angiography (CTA) for application in 2D transthoracic echocardiography (TTE...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Mining Generalizable Activation Functions</title>
+      <link>https://arxiv.org/abs/2602.05688v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05688v1</guid>
+      <description>The choice of activation function is an active area of research, with different proposals aimed at improving optimization, while maintaining expressivity. Additionally, the activation function can significantly alter the implicit inductive bias of the architecture, controlling its non-linear behavio...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] SAGE: Benchmarking and Improving Retrieval for Deep Research Agents</title>
+      <link>https://arxiv.org/abs/2602.05975v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05975v1</guid>
+      <description>Deep research agents have emerged as powerful systems for addressing complex queries. Meanwhile, LLM-based retrievers have demonstrated strong capability in following instructions or reasoning. This raises a critical question: can LLM-based retrievers effectively contribute to deep research agent wo...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Learning to Share: Selective Memory for Efficient Parallel Agentic Systems</title>
+      <link>https://arxiv.org/abs/2602.05965v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05965v1</guid>
+      <description>Agentic systems solve complex tasks by coordinating multiple agents that iteratively reason, invoke tools, and exchange intermediate results. To improve robustness and solution quality, recent approaches deploy multiple agent teams running in parallel to explore diverse reasoning trajectories. Howev...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] The Effects of Non-ideal Mixing in Planetary Magma Oceans and Atmospheres</title>
+      <link>https://arxiv.org/abs/2602.05917v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05917v1</guid>
+      <description>Sub-Neptunes with hydrogen-rich envelopes are expected to sustain long-lived magma oceans that continuously exchange volatiles with their overlying atmospheres. Capturing these interactions is key to understanding the chemical evolution and present-day diversity of sub-Neptunes, super-Earths, and te...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] An Equational Axiomatization of Dynamic Threads via Algebraic Effects: Presheaves on Finite Relations, Labelled Posets, and Parameterized Algebraic Theories</title>
+      <link>https://arxiv.org/abs/2602.05850v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05850v1</guid>
+      <description>We use the theory of algebraic effects to give a complete equational axiomatization for dynamic threads. Our method is based on parameterized algebraic theories, which give a concrete syntax for strong monads on functor categories, and are a convenient framework for names and binding. Our programs a...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Self-Supervised Learning with a Multi-Task Latent Space Objective</title>
+      <link>https://arxiv.org/abs/2602.05845v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05845v1</guid>
+      <description>Self-supervised learning (SSL) methods based on Siamese networks learn visual representations by aligning different views of the same image. The multi-crop strategy, which incorporates small local crops to global ones, enhances many SSL frameworks but causes instability in predictor-based architectu...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Where Does Warm-Up Come From? Adaptive Scheduling for Norm-Constrained Optimizers</title>
+      <link>https://arxiv.org/abs/2602.05813v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05813v1</guid>
+      <description>We study adaptive learning rate scheduling for norm-constrained optimizers (e.g., Muon and Lion). We introduce a generalized smoothness assumption under which local curvature decreases with the suboptimality gap and empirically verify that this behavior holds along optimization trajectories. Under t...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Evaluating the impact of word embeddings on similarity scoring in practical information retrieval</title>
+      <link>https://arxiv.org/abs/2602.05734v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05734v1</guid>
+      <description>Search behaviour is characterised using synonymy and polysemy as users often want to search information based on meaning. Semantic representation strategies represent a move towards richer associative connections that can adequately capture this complex usage of language. Vector Space Modelling (VSM...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences</title>
+      <link>https://arxiv.org/abs/2602.05927v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05927v1</guid>
+      <description>Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers alre...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Metric Hedonic Games on the Line</title>
+      <link>https://arxiv.org/abs/2602.05888v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05888v1</guid>
+      <description>Hedonic games are fundamental models for investigating the formation of coalitions among a set of strategic agents, where every agent has a certain utility for every possible coalition of agents it can be part of. To avoid the intractability of defining exponentially many utilities for all possible ...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Microlensing constraint on Primordial Black Hole abundance with Subaru Hyper Suprime-Cam observations of Andromeda</title>
+      <link>https://arxiv.org/abs/2602.05840v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05840v1</guid>
+      <description>We present updated microlensing analysis results based on high-cadence ($\sim$2~min) Subaru Hyper Suprime-Cam (HSC) observations of the Andromeda Galaxy (M31) in 2014, 2017, and 2020, yielding a total of 39.3 hours of data. We use a point-lens finite-source model for the microlensing light curve mod...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Momentum-conserving self-gravity in the phantom smoothed particle hydrodynamics code. Parallel dual tree traversal for the symmetric fast multipole method</title>
+      <link>https://arxiv.org/abs/2602.05804v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05804v1</guid>
+      <description>Tree codes that approximate groups of distant particles with multipole expansions are the standard way to accelerate the computation of self-gravity on particles. While momentum-conserving fast multipole methods exist, parallelisation is non-trivial and previous implementations have been limited to ...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] A Stronger Benchmark for Online Bilateral Trade: From Fixed Prices to Distributions</title>
+      <link>https://arxiv.org/abs/2602.05681v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05681v1</guid>
+      <description>We study online bilateral trade, where a learner facilitates repeated exchanges between a buyer and a seller to maximize the Gain From Trade (GFT), i.e., the social welfare. In doing so, the learner must guarantee not to subsidize the market. This constraint is usually imposed per round through Weak...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Heteroclinic connections between finite-amplitude periodic orbits emerging from a codimension two singularity</title>
+      <link>https://arxiv.org/abs/2602.05680v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05680v1</guid>
+      <description>Heteroclinic connections between two distinct hyperbolic periodic orbits in conservative systems are important in a wide range of applications. On the other hand, it is theoretically challenging to find large amplitude connections from scratch and compute them numerically. In this paper, we use a co...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Groups and Inverse Semigroups in Lambda Calculus</title>
+      <link>https://arxiv.org/abs/2602.05654v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05654v1</guid>
+      <description>We study invertibility of $λ$-terms modulo $λ$-theories. Here a fundamental role is played by a class of $λ$-terms called finite hereditary permutations (FHP) and by their infinite generalisations (HP). More precisely, FHPs are the invertible elements in the least extensional $λ$-theory $λη$ and HPs...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] The Multicolor Induced Size-Ramsey Number of Long Subdivisions</title>
+      <link>https://arxiv.org/abs/2602.05960v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05960v1</guid>
+      <description>For a positive integer $k$ and a graph $H$, the $k$-color induced size-Ramsey number \linebreak $\widehat{R}_{\mathrm{ind}}(H, k)$ is the minimum integer $m$ for which there exists a graph $G$ with $m$ edges such that for every $k$-edge coloring of $G$, the graph $G$ contains a monochromatic copy of...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Breaking Symmetry Bottlenecks in GNN Readouts</title>
+      <link>https://arxiv.org/abs/2602.05950v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05950v1</guid>
+      <description>Graph neural networks (GNNs) are widely used for learning on structured data, yet their ability to distinguish non-isomorphic graphs is fundamentally limited. These limitations are usually attributed to message passing; in this work we show that an independent bottleneck arises at the readout stage....</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Polyglots or Multitudes? Multilingual LLM Answers to Value-laden Multiple-Choice Questions</title>
+      <link>https://arxiv.org/abs/2602.05932v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05932v1</guid>
+      <description>Multiple-Choice Questions (MCQs) are often used to assess knowledge, reasoning abilities, and even values encoded in large language models (LLMs). While the effect of multilingualism has been studied on LLM factual recall, this paper seeks to investigate the less explored question of language-induce...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Even Faster Geosocial Reachability Queries</title>
+      <link>https://arxiv.org/abs/2602.05928v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05928v1</guid>
+      <description>Geosocial reachability queries (\textsc{RangeReach}) determine whether a given vertex in a geosocial network can reach any spatial vertex within a query region. The state-of-the-art 3DReach method answers such queries by encoding graph reachability through interval labelling and indexing spatial ver...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] The Case of the Mysterious Citations</title>
+      <link>https://arxiv.org/abs/2602.05867v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05867v1</guid>
+      <description>Mysterious citations are routinely appearing in peer-reviewed publications throughout the scientific community. In this paper, we developed an automated pipeline and examine the proceedings of four major high-performance computing conferences, comparing the accuracy of citations between the 2021 and...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Price of universality in vector quantization is at most 0.11 bit</title>
+      <link>https://arxiv.org/abs/2602.05790v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05790v1</guid>
+      <description>Fast computation of a matrix product $W^\top X$ is a workhorse of modern LLMs. To make their deployment more efficient, a popular approach is that of using a low-precision approximation $\widehat W$ in place of true $W$ ("weight-only quantization''). Information theory demonstrates that an optimal a...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] The resurgence of errors in the localization of $\mathcal{N} = 2$ superconformal Yang-Mills</title>
+      <link>https://arxiv.org/abs/2602.05733v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05733v1</guid>
+      <description>We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling. We show that a well-motivated 2d construction associates two-dimensional unstable instantons t...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] FedRandom: Sampling Consistent and Accurate Contribution Values in Federated Learning</title>
+      <link>https://arxiv.org/abs/2602.05693v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05693v1</guid>
+      <description>Federated Learning is a privacy-preserving decentralized approach for Machine Learning tasks. In industry deployments characterized by a limited number of entities possessing abundant data, the significance of a participant's role in shaping the global model becomes pivotal given that participation ...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Computing Diffusion Geometry</title>
+      <link>https://arxiv.org/abs/2602.06006v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.06006v1</guid>
+      <description>Calculus and geometry are ubiquitous in the theoretical modelling of scientific phenomena, but have historically been very challenging to apply directly to real data as statistics. Diffusion geometry is a new theory that reformulates classical calculus and geometry in terms of a diffusion process, a...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Verification of the Implicit World Model in a Generative Model via Adversarial Sequences</title>
+      <link>https://arxiv.org/abs/2602.05903v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05903v1</guid>
+      <description>Generative sequence models are typically trained on sample sequences from natural or formal languages. It is a crucial question whether -- or to what extent -- sample-based training is able to capture the true structure of these languages, often referred to as the ``world model''. Theoretical result...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Residual Reinforcement Learning for Waste-Container Lifting Using Large-Scale Cranes with Underactuated Tools</title>
+      <link>https://arxiv.org/abs/2602.05895v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05895v1</guid>
+      <description>This paper studies the container lifting phase of a waste-container recycling task in urban environments, performed by a hydraulic loader crane equipped with an underactuated discharge unit, and proposes a residual reinforcement learning (RRL) approach that combines a nominal Cartesian controller wi...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Note on the treewidth of graphs excluding a disjoint union of cycles as a minor</title>
+      <link>https://arxiv.org/abs/2602.05844v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05844v1</guid>
+      <description>For a planar graph $H$, let $f(H)$ denote the minimum integer such that all graphs excluding $H$ as a minor have treewidth at most $f(H)$. We show that if $H$ is a disjoint union of $k$ cycles then $f(H)=O(|V(H)| + k \log k)$, which is best possible.</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] The Quantum Message Complexity of Distributed Wake-Up with Advice</title>
+      <link>https://arxiv.org/abs/2602.05801v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05801v1</guid>
+      <description>We consider the distributed wake-up problem with advice, where nodes are equipped with initial knowledge about the network at large. After the adversary awakens a subset of nodes, an oracle computes a bit string (``the advice'') for each node, and the goal is to wake up all sleeping nodes efficientl...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Selecting Hyperparameters for Tree-Boosting</title>
+      <link>https://arxiv.org/abs/2602.05786v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05786v1</guid>
+      <description>Tree-boosting is a widely used machine learning technique for tabular data. However, its out-of-sample accuracy is critically dependent on multiple hyperparameters. In this article, we empirically compare several popular methods for hyperparameter optimization for tree-boosting including random grid...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] An Erdős problem on random subset sums in finite abelian groups</title>
+      <link>https://arxiv.org/abs/2602.05768v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05768v1</guid>
+      <description>Let $f(N)$ denote the least integer $k$ such that, if $G$ is an abelian group of order $N$ and $A \subseteq G$ is a uniformly random $k$-element subset, then with probability at least $\tfrac12$ the subset-sum set $\{ \sum_{x \in S} x : S \subseteq A \}$ equals $G$. In 1965, Erdős and Rényi proved t...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Minimal Equicontinuous Actions on Stone Spaces</title>
+      <link>https://arxiv.org/abs/2602.05756v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05756v1</guid>
+      <description>In this article we study minimal equicontinuous actions on Stone spaces, which we call \emph{subodometers}, and do neither assume that the space is metrizable, nor any assumptions on the acting group. We show that the set of eigenvalues is a complete invariant for subodometers. Furthermore, we chara...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] The 2-Dimensional Dual of $φ^4$ in AdS$_3$</title>
+      <link>https://arxiv.org/abs/2602.05750v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05750v1</guid>
+      <description>We study the correlation functions of a conformally coupled $φ^4$-interacting theory in AdS$_3$ and its dual CFT$_2$. The one-loop diagram is not expressible in terms of known transcendental functions, but is shown to be expressible as an infinite sum of previously well-studied tree-level diagrams, ...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] "It from Bit": The Hartle-Hawking state and quantum mechanics for de Sitter observers</title>
+      <link>https://arxiv.org/abs/2602.05939v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05939v1</guid>
+      <description>The one-state statement for closed universes has sparked considerable discussion. In this paper we examine its physical meaning in the context of the Hartle-Hawking state and de Sitter space. We argue that the one-state property of closed universes is fully compatible with the finite-dimensional qua...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025</title>
+      <link>https://arxiv.org/abs/2602.05930v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05930v1</guid>
+      <description>Large language models (LLMs) are increasingly used in academic writing workflows, yet they frequently hallucinate by generating citations to sources that do not exist. This study analyzes 100 AI-generated hallucinated citations that appeared in papers accepted by the 2025 Conference on Neural Inform...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem</title>
+      <link>https://arxiv.org/abs/2602.05920v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05920v1</guid>
+      <description>This paper addresses the Capacitated Vehicle Routing Problem (CVRP) by comparing classical and quantum Reinforcement Learning (RL) approaches. An Advantage Actor-Critic (A2C) agent is implemented in classical, full quantum, and hybrid variants, integrating transformer architectures to capture the re...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Finite energy subspace for time-periodic Schrödinger operators</title>
+      <link>https://arxiv.org/abs/2602.05719v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05719v1</guid>
+      <description>For $N$-body Schrö\-dinger operators with   time-periodic short-range pair-potentials we show by a time-dependent commutator method that all channel wave operators   exist. For $N=2$ we prove asymptotic completeness by a simplified version of the method, recovering Yajima's completeness result \cite...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[AI Red Teaming & Blue Teaming] Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation</title>
+      <link>https://arxiv.org/abs/2602.05656v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05656v1</guid>
+      <description>Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In practice, alignment is inferred from performance under finite evaluation protocols - benchmarks, red-teaming suites, or automated pipelines - and observed compliance is often treated as evidenc...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Red Teaming & Blue Teaming</category>
+    </item>
+    <item>
+      <title>[Prompt Injection & Jailbreaking] Learning to Inject: Automated Prompt Injection via Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2602.05746v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05746v1</guid>
+      <description>Prompt injection is one of the most critical vulnerabilities in LLM agents; yet, effective automated attacks remain largely unexplored from an optimization perspective. Existing methods heavily depend on human red-teamers and hand-crafted prompts, limiting their scalability and adaptability. We prop...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>Prompt Injection & Jailbreaking</category>
+    </item>
+    <item>
+      <title>[AI Safety & Robustness] LongR: Unleashing Long-Context Reasoning via Reinforcement Learning with Dense Utility Rewards</title>
+      <link>https://arxiv.org/abs/2602.05758v1</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.05758v1</guid>
+      <description>Reinforcement Learning has emerged as a key driver for LLM reasoning. This capability is equally pivotal in long-context scenarios--such as long-dialogue understanding and structured data analysis, where the challenge extends beyond consuming tokens to performing rigorous deduction. While existing e...</description>
+      <pubDate>Sun, 08 Feb 2026 20:45:02 +0000</pubDate>
+      <category>AI Safety & Robustness</category>
+    </item>
+  </channel>
+</rss>

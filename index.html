@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Security Research Digest</title>
+<meta name="description" content="Daily digest of ArXiv papers on AI security, red/blue teaming, prompt injection, jailbreaking, model poisoning, network security, and OS security. Sorted by citation count.">
+<link rel="alternate" type="application/rss+xml" title="AI Security Research Digest" href="https://ek0212.github.io/arxiv-ai-security-digest/feed.xml">
+<style>
+:root {
+    --bg: #f8f9fa; --surface: #fff; --text: #1a1a1a; --muted: #666;
+    --accent: #0f3460; --accent-light: #e8edf3; --border: #e0e0e0;
+    --green-bg: #e6f4e6; --green: #2d6a2d; --yellow-bg: #f5f5dc; --yellow: #5a5a00;
+    --orange-bg: #fff3e0; --orange: #e65100;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+       max-width: 760px; margin: 0 auto; padding: 20px; color: var(--text);
+       background: var(--bg); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+           color: white; padding: 30px; border-radius: 12px; margin-bottom: 24px; }
+.header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.header p { opacity: 0.85; font-size: 14px; }
+.header .subscribe-row { margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
+.header .subscribe-row a { color: white; background: rgba(255,255,255,0.15);
+    padding: 6px 16px; border-radius: 6px; font-size: 13px; font-weight: 500;
+    transition: background 0.2s; }
+.header .subscribe-row a:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+.nav { display: flex; gap: 16px; margin-bottom: 20px; font-size: 14px; }
+.sort-note { font-size: 12px; color: var(--muted); margin-bottom: 20px;
+             padding: 8px 12px; background: var(--surface); border-left: 3px solid var(--accent);
+             border-radius: 4px; }
+.topic { margin-bottom: 28px; }
+.topic-header { font-size: 16px; font-weight: 700; color: var(--accent);
+                border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-bottom: 14px; }
+.paper { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+         padding: 16px; margin-bottom: 12px; }
+.paper-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.paper-meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.paper-citations { margin-bottom: 8px; }
+.badge { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+         display: inline-block; margin-right: 4px; }
+.badge-new { background: #f0f0f0; color: #999; }
+.badge-low { background: #f0f0f0; color: #666; }
+.badge-med { background: var(--yellow-bg); color: var(--yellow); }
+.badge-high { background: var(--green-bg); color: var(--green); }
+.badge-influential { background: var(--orange-bg); color: var(--orange); }
+.paper-abstract { font-size: 13px; color: #333; }
+.paper-cats { font-size: 11px; color: #888; margin-top: 8px; }
+.paper-cats span { background: var(--accent-light); padding: 2px 8px; border-radius: 4px;
+                   margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+.paper-links { font-size: 12px; margin-top: 8px; }
+.paper-links a { margin-right: 12px; }
+.footer { text-align: center; font-size: 12px; color: #999; margin-top: 30px;
+          padding-top: 16px; border-top: 1px solid var(--border); }
+.no-papers { color: var(--muted); font-style: italic; padding: 12px; }
+.archive-list { list-style: none; }
+.archive-list li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.archive-list li:last-child { border-bottom: none; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>AI Security Research Digest</h1>
+  <p>February 08, 2026 &middot; 52 new papers</p>
+  <div class="subscribe-row">
+    <a href="https://ek0212.github.io/arxiv-ai-security-digest/feed.xml">&#128227; RSS Feed</a>
+    <a href="https://github.com/ek0212/arxiv-ai-security-digest">&#11088; GitHub</a>
+  </div>
+</div>
+<nav class="nav">
+  <a href="https://ek0212.github.io/arxiv-ai-security-digest/">Today</a>
+  <a href="https://ek0212.github.io/arxiv-ai-security-digest/archive/">Archive</a>
+</nav>
+<div class="sort-note">
+  Sorted by citation count via Semantic Scholar. New uncited papers appear last in each section.
+</div>
+<div class="topic"><div class="topic-header">AI Red Teaming & Blue Teaming (50)</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05907v1">Self-Portrait of the Focusing Process in Speckle: I. Spatio-Temporal Imaging of Wave Packets in Complex Media</a></div>
+  <div class="paper-meta">Elsa Giraudat, Flavien Bureau, William Lambert, Mathias Fink, Alexandre Aubry &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-low">2 cited</span></div>
+  <div class="paper-abstract">This is the first article in a series of three dealing with the exploitation of speckle for imaging purposes. Speckle is the complex interference wave-field produced by a random distribution of un-resolved scatterers. In this paper, we show how these scatterers can be used as virtual microphones to monitor the spatio-temporal propagation of a wave-packet inside the medium. To do so, the concept of matrix imaging is particularly useful. It consists in decoupling the location of the transmitted an...</div>
+  <div class="paper-cats"><span>physics.app-ph</span><span>physics.med-ph</span><span>physics.optics</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05907v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05907v1">PDF</a> <a href="https://www.semanticscholar.org/paper/c2a3547e0d8ce0ae9b96e9ac324920cfea59dba3">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05752v1">Orthogonal Superposition Rheometry of soft core-shell microgels</a></div>
+  <div class="paper-meta">Panagiota Bogri, Gabriele Pagani, Jan Vermant, Joris Sprakel, George Petekidis &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-low">1 cited</span></div>
+  <div class="paper-abstract">The mechanisms of flow in suspensions of soft particles above the glass-transition volume fraction and in the jammed state were probed using Orthogonal Superposition Rheometry (OSR). A small amplitude oscillatory shear flow is superimposed orthogonally onto a steady shear flow, which allows monitoring the viscoelastic spectra of sheared jammed core-shell microgels during flow. The characteristic crossover frequency ωc, deduced from the viscoelastic spectrum, provides information about the shear ...</div>
+  <div class="paper-cats"><span>cond-mat.soft</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05752v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05752v1">PDF</a> <a href="https://www.semanticscholar.org/paper/cf6df46dcef03298e7e49af3d64beb604e7937c3">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05879v1">EuroLLM-22B: Technical Report</a></div>
+  <div class="paper-meta">Miguel Moura Ramos, Duarte M. Alves, Hippolyte Gisserot-Boukhlef, João Alves, Pedro Henrique Martins + 13 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">This report presents EuroLLM-22B, a large language model trained from scratch to support the needs of European citizens by covering all 24 official European Union languages and 11 additional languages. EuroLLM addresses the issue of European languages being underrepresented and underserved in existing open large language models. We provide a comprehensive overview of EuroLLM-22B's development, including tokenizer design, architectural specifications, data filtering, and training procedures. Acro...</div>
+  <div class="paper-cats"><span>cs.CL</span><span>cs.AI</span><span>cs.LG</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05879v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05879v1">PDF</a> <a href="https://www.semanticscholar.org/paper/4e068550a64f60e85f599fd9ee6d91a00d807500">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05665v1">Graph-based Agent Memory: Taxonomy, Techniques, and Applications</a></div>
+  <div class="paper-meta">Chang Yang, Chuang Zhou, Yilin Xiao, Su Dong, Luyao Zhuang + 13 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Memory emerges as the core module in the Large Language Model (LLM)-based agents for long-horizon complex tasks (e.g., multi-turn dialogue, game playing, scientific discovery), where memory can enable knowledge accumulation, iterative reasoning and self-evolution. Among diverse paradigms, graph stands out as a powerful structure for agent memory due to the intrinsic capabilities to model relational dependencies, organize hierarchical information, and support efficient retrieval. This survey pres...</div>
+  <div class="paper-cats"><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05665v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05665v1">PDF</a> <a href="https://www.semanticscholar.org/paper/94e27f0b99372e133122755c42cb96db5b04e47f">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05947v1">Long-term timing of the relativistic binary PSR J1906+0746</a></div>
+  <div class="paper-meta">L. Vleeschower, B. W. Stappers, M. J. Keith, G. Desvignes, P. C. C. Freire + 7 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We conducted a timing analysis of over 18 years of data on the young ($τ_{\rm c} = 112$ kyr, $P = 114$\,ms) relativistic binary PSR~J1906+0746, using six radio telescopes: Arecibo, FAST, Green Bank, Lovell, MeerKAT, and Nançay. This pulsar is known to orbit a compact high-mass companion with a period of 3.98\,hrs in a mildly eccentric orbit ($e = 0.085$). By combining all data and maintaining a coherent timing solution over the full span, we obtained a more precise measurement of the advance of ...</div>
+  <div class="paper-cats"><span>astro-ph.HE</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05947v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05947v1">PDF</a> <a href="https://www.semanticscholar.org/paper/405cc6f7b0d503633325b19cca08315bf9e446ec">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05853v1">RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference</a></div>
+  <div class="paper-meta">Siran Liu, Guoxia Wang, Sa Wang, Jinle Zeng, HaoYang Xie + 5 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">The quadratic complexity of attention mechanisms poses a critical bottleneck for large language models processing long contexts. While dynamic sparse attention methods offer input-adaptive efficiency, they face fundamental trade-offs: requiring preprocessing, lacking global evaluation, violating query independence, or incurring high computational overhead. We present RRAttention, a novel dynamic sparse attention method that simultaneously achieves all desirable properties through a head \underli...</div>
+  <div class="paper-cats"><span>cs.CL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05853v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05853v1">PDF</a> <a href="https://www.semanticscholar.org/paper/8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05692v1">MedErrBench: A Fine-Grained Multilingual Benchmark for Medical Error Detection and Correction with Clinical Expert Annotations</a></div>
+  <div class="paper-meta">Congbo Ma, Yichun Zhang, Yousef Al-Jazzazi, Ahamed Foisal, Laasya Sharma + 4 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Inaccuracies in existing or generated clinical text may lead to serious adverse consequences, especially if it is a misdiagnosis or incorrect treatment suggestion. With Large Language Models (LLMs) increasingly being used across diverse healthcare applications, comprehensive evaluation through dedicated benchmarks is crucial. However, such datasets remain scarce, especially across diverse languages and contexts. In this paper, we introduce MedErrBench, the first multilingual benchmark for error ...</div>
+  <div class="paper-cats"><span>cs.CL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05692v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05692v1">PDF</a> <a href="https://www.semanticscholar.org/paper/8f4200f6243211547a17f07dc38b5b46d3df729a">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.06040v1">SwimBird: Eliciting Switchable Reasoning Mode in Hybrid Autoregressive MLLMs</a></div>
+  <div class="paper-meta">Jintao Tong, Shilin Yan, Hongwei Xue, Xiaojun Tang, Kunyu Shi + 3 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Multimodal Large Language Models (MLLMs) have made remarkable progress in multimodal perception and reasoning by bridging vision and language. However, most existing MLLMs perform reasoning primarily with textual CoT, which limits their effectiveness on vision-intensive tasks. Recent approaches inject a fixed number of continuous hidden states as "visual thoughts" into the reasoning process and improve visual performance, but often at the cost of degraded text-based logical reasoning. We argue t...</div>
+  <div class="paper-cats"><span>cs.CV</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.06040v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.06040v1">PDF</a> <a href="https://www.semanticscholar.org/paper/fd7df68b1d357f5b1fbfd024a2cf2b1daeed8092">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05988v1">Layer-wise LoRA fine-tuning: a similarity metric approach</a></div>
+  <div class="paper-meta">Keith Ando Ogawa, Bruno Lopes Yamamoto, Lucas Lauton de Alcantara, Lucas Pellicer, Rosimeire Pereira Costa + 3 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Pre-training Large Language Models (LLMs) on web-scale datasets becomes fundamental for advancing general-purpose AI. In contrast, enhancing their predictive performance on downstream tasks typically involves adapting their knowledge through fine-tuning. Parameter-efficient fine-tuning techniques, such as Low-Rank Adaptation (LoRA), aim to reduce the computational cost of this process by freezing the pre-trained model and updating a smaller number of parameters. In comparison to full fine-tuning...</div>
+  <div class="paper-cats"><span>cs.LG</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05988v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05988v1">PDF</a> <a href="https://www.semanticscholar.org/paper/fa7dd330ca8fe8b7ecb9438cc4026ccebe2338ae">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05735v1">CSRv2: Unlocking Ultra-Sparse Embeddings</a></div>
+  <div class="paper-meta">Lixuan Guo, Yifei Wang, Tiansheng Wen, Yifan Wang, Aosong Feng + 3 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">In the era of large foundation models, the quality of embeddings has become a central determinant of downstream task performance and overall system capability. Yet widely used dense embeddings are often extremely high-dimensional, incurring substantial costs in storage, memory, and inference latency. To address these, Contrastive Sparse Representation (CSR) is recently proposed as a promising direction, mapping dense embeddings into high-dimensional but k-sparse vectors, in contrast to compact d...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.AI</span><span>cs.IR</span><span>cs.IT</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05735v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05735v1">PDF</a> <a href="https://www.semanticscholar.org/paper/55885e57640104cc9d4802136d7317ef1734aa2b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05885v1">Dr. Kernel: Reinforcement Learning Done Right for Triton Kernel Generations</a></div>
+  <div class="paper-meta">Wei Liu, Jiawei Xu, Yingru Li, Longtao Zheng, Tianjian Li + 2 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">High-quality kernel is critical for scalable AI systems, and enabling LLMs to generate such code would advance AI development. However, training LLMs for this task requires sufficient data, a robust environment, and the process is often vulnerable to reward hacking and lazy optimization. In these cases, models may hack training rewards and prioritize trivial correctness over meaningful speedup. In this paper, we systematically study reinforcement learning (RL) for kernel generation. We first des...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.AI</span><span>cs.CL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05885v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05885v1">PDF</a> <a href="https://www.semanticscholar.org/paper/574c2382fecace55e6cf47476c37c4e553901123">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05743v1">Balancing FP8 Computation Accuracy and Efficiency on Digital CIM via Shift-Aware On-the-fly Aligned-Mantissa Bitwidth Prediction</a></div>
+  <div class="paper-meta">Liang Zhao, Kunming Shao, Zhipeng Liao, Xijie Huang, Tim Kwang-Ting Cheng + 2 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">FP8 low-precision formats have gained significant adoption in Transformer inference and training. However, existing digital compute-in-memory (DCIM) architectures face challenges in supporting variable FP8 aligned-mantissa bitwidths, as unified alignment strategies and fixed-precision multiply-accumulate (MAC) units struggle to handle input data with diverse distributions. This work presents a flexible FP8 DCIM accelerator with three innovations: (1) a dynamic shift-aware bitwidth prediction (DS...</div>
+  <div class="paper-cats"><span>cs.AR</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05743v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05743v1">PDF</a> <a href="https://www.semanticscholar.org/paper/b3d44a734a039eb2205c3301c1102f76e4b57128">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05884v1">Neural Implicit 3D Cardiac Shape Reconstruction from Sparse CT Angiography Slices Mimicking 2D Transthoracic Echocardiography Views</a></div>
+  <div class="paper-meta">Gino E. Jansen, Carolina Brás, R. Nils Planken, Mark J. Schuuring, Berto J. Bouma + 1 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Accurate 3D representations of cardiac structures allow quantitative analysis of anatomy and function. In this work, we propose a method for reconstructing complete 3D cardiac shapes from segmentations of sparse planes in CT angiography (CTA) for application in 2D transthoracic echocardiography (TTE). Our method uses a neural implicit function to reconstruct the 3D shape of the cardiac chambers and left-ventricle myocardium from sparse CTA planes. To investigate the feasibility of achieving 3D r...</div>
+  <div class="paper-cats"><span>cs.CV</span><span>cs.AI</span><span>cs.CE</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05884v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05884v1">PDF</a> <a href="https://www.semanticscholar.org/paper/1fe4695ea210b23f05d1d5491aa3d820fec015db">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05688v1">Mining Generalizable Activation Functions</a></div>
+  <div class="paper-meta">Alex Vitvitskyi, Michael Boratko, Matej Grcic, Razvan Pascanu, Deep Shah + 1 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">The choice of activation function is an active area of research, with different proposals aimed at improving optimization, while maintaining expressivity. Additionally, the activation function can significantly alter the implicit inductive bias of the architecture, controlling its non-linear behavior. In this paper, in line with previous work, we argue that evolutionary search provides a useful framework for finding new activation functions, while we also make two novel observations. The first i...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05688v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05688v1">PDF</a> <a href="https://www.semanticscholar.org/paper/e16f67a73ea1669135e9c2036c8d4042adbe1b2d">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05975v1">SAGE: Benchmarking and Improving Retrieval for Deep Research Agents</a></div>
+  <div class="paper-meta">Tiansheng Hu, Yilun Zhao, Canyu Zhang, Arman Cohan, Chen Zhao &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Deep research agents have emerged as powerful systems for addressing complex queries. Meanwhile, LLM-based retrievers have demonstrated strong capability in following instructions or reasoning. This raises a critical question: can LLM-based retrievers effectively contribute to deep research agent workflows? To investigate this, we introduce SAGE, a benchmark for scientific literature retrieval comprising 1,200 queries across four scientific domains, with a 200,000 paper retrieval corpus.We evalu...</div>
+  <div class="paper-cats"><span>cs.IR</span><span>cs.CL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05975v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05975v1">PDF</a> <a href="https://www.semanticscholar.org/paper/9ca391c5c9e7a7f482408a405f1eeea7dd2c02b7">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05965v1">Learning to Share: Selective Memory for Efficient Parallel Agentic Systems</a></div>
+  <div class="paper-meta">Joseph Fioresi, Parth Parag Kulkarni, Ashmal Vayani, Song Wang, Mubarak Shah &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Agentic systems solve complex tasks by coordinating multiple agents that iteratively reason, invoke tools, and exchange intermediate results. To improve robustness and solution quality, recent approaches deploy multiple agent teams running in parallel to explore diverse reasoning trajectories. However, parallel execution comes at a significant computational cost: when different teams independently reason about similar sub-problems or execute analogous steps, they repeatedly perform substantial o...</div>
+  <div class="paper-cats"><span>cs.MA</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05965v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05965v1">PDF</a> <a href="https://www.semanticscholar.org/paper/6c7b3c7e5ea8895e3ee60ddb33789bc595128eb7">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05917v1">The Effects of Non-ideal Mixing in Planetary Magma Oceans and Atmospheres</a></div>
+  <div class="paper-meta">Aaron Werlen, Edward D. Young, Hilke E. Schlichting, Caroline Dorn, Anat Shahar &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Sub-Neptunes with hydrogen-rich envelopes are expected to sustain long-lived magma oceans that continuously exchange volatiles with their overlying atmospheres. Capturing these interactions is key to understanding the chemical evolution and present-day diversity of sub-Neptunes, super-Earths, and terrestrial planets, particularly in light of new JWST observations and upcoming missions. Recent advances in both geochemistry and astrophysics now allow the integration of experimental constraints and...</div>
+  <div class="paper-cats"><span>astro-ph.EP</span><span>physics.geo-ph</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05917v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05917v1">PDF</a> <a href="https://www.semanticscholar.org/paper/ca73f7a1a44ce96213d83908bce35fe124ad933f">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05850v1">An Equational Axiomatization of Dynamic Threads via Algebraic Effects: Presheaves on Finite Relations, Labelled Posets, and Parameterized Algebraic Theories</a></div>
+  <div class="paper-meta">Ohad Kammar, Jack Liell-Cock, Sam Lindley, Cristina Matache, Sam Staton &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We use the theory of algebraic effects to give a complete equational axiomatization for dynamic threads. Our method is based on parameterized algebraic theories, which give a concrete syntax for strong monads on functor categories, and are a convenient framework for names and binding. Our programs are built from the key primitives `fork' and `wait'. `Fork' creates a child thread and passes its name (thread ID) to the parent thread. `Wait' allows us to wait for given child threads to finish. We p...</div>
+  <div class="paper-cats"><span>cs.PL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05850v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05850v1">PDF</a> <a href="https://www.semanticscholar.org/paper/137e6269d1915459ca72b25f094fa26a1821d226">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05845v1">Self-Supervised Learning with a Multi-Task Latent Space Objective</a></div>
+  <div class="paper-meta">Pierre-François De Plaen, Abhishek Jha, Luc Van Gool, Tinne Tuytelaars, Marc Proesmans &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Self-supervised learning (SSL) methods based on Siamese networks learn visual representations by aligning different views of the same image. The multi-crop strategy, which incorporates small local crops to global ones, enhances many SSL frameworks but causes instability in predictor-based architectures such as BYOL, SimSiam, and MoCo v3. We trace this failure to the shared predictor used across all views and demonstrate that assigning a separate predictor to each view type stabilizes multi-crop ...</div>
+  <div class="paper-cats"><span>cs.CV</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05845v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05845v1">PDF</a> <a href="https://www.semanticscholar.org/paper/fa321a1e03b1ab34e8e397c28a5e5f0c25654e5b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05813v1">Where Does Warm-Up Come From? Adaptive Scheduling for Norm-Constrained Optimizers</a></div>
+  <div class="paper-meta">Artem Riabinin, Andrey Veprikov, Arman Bolatov, Martin Takáč, Aleksandr Beznosikov &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We study adaptive learning rate scheduling for norm-constrained optimizers (e.g., Muon and Lion). We introduce a generalized smoothness assumption under which local curvature decreases with the suboptimality gap and empirically verify that this behavior holds along optimization trajectories. Under this assumption, we establish convergence guarantees under an appropriate choice of learning rate, for which warm-up followed by decay arises naturally from the proof rather than being imposed heuristi...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>math.OC</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05813v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05813v1">PDF</a> <a href="https://www.semanticscholar.org/paper/8a392e4d658305e42836122f5ec3e1fb4df13a35">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05734v1">Evaluating the impact of word embeddings on similarity scoring in practical information retrieval</a></div>
+  <div class="paper-meta">Niall McCarroll, Kevin Curran, Eugene McNamee, Angela Clist, Andrew Brammer &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Search behaviour is characterised using synonymy and polysemy as users often want to search information based on meaning. Semantic representation strategies represent a move towards richer associative connections that can adequately capture this complex usage of language. Vector Space Modelling (VSM) and neural word embeddings play a crucial role in modern machine learning and Natural Language Processing (NLP) pipelines. Embeddings use distributional semantics to represent words, sentences, para...</div>
+  <div class="paper-cats"><span>cs.IR</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05734v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05734v1">PDF</a> <a href="https://www.semanticscholar.org/paper/67d7871b1ef218f4f3c5da589a5f5588748c619f">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05927v1">Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences</a></div>
+  <div class="paper-meta">Siquan Li, Yao Tong, Haonan Wang, Tianyang Hu &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers already exhibit strong and systematic structural biases. In particular, untrained models display extreme token preferences: across random input sequences, certain tokens are predicted with probabilities o...</div>
+  <div class="paper-cats"><span>stat.ML</span><span>cs.LG</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05927v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05927v1">PDF</a> <a href="https://www.semanticscholar.org/paper/814f30762bb6d7787c366b69fd96491ebc15ef0b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05888v1">Metric Hedonic Games on the Line</a></div>
+  <div class="paper-meta">Merlin de la Haye, Pascal Lenzner, Farehe Soheil, Marcus Wunderlich &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Hedonic games are fundamental models for investigating the formation of coalitions among a set of strategic agents, where every agent has a certain utility for every possible coalition of agents it can be part of. To avoid the intractability of defining exponentially many utilities for all possible coalitions, many variants with succinct representations of the agents' utility functions have been devised and analyzed, e.g., modified fractional hedonic games by Monaco et al. [JAAMAS 2020]. We exte...</div>
+  <div class="paper-cats"><span>cs.GT</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05888v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05888v1">PDF</a> <a href="https://www.semanticscholar.org/paper/12c849c119b9cb0b3a15cb827246ad5f7580192a">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05840v1">Microlensing constraint on Primordial Black Hole abundance with Subaru Hyper Suprime-Cam observations of Andromeda</a></div>
+  <div class="paper-meta">Sunao Sugiyama, Masahiro Takada, Naoki Yasuda, Nozomu Tominaga &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We present updated microlensing analysis results based on high-cadence ($\sim$2~min) Subaru Hyper Suprime-Cam (HSC) observations of the Andromeda Galaxy (M31) in 2014, 2017, and 2020, yielding a total of 39.3 hours of data. We use a point-lens finite-source model for the microlensing light curve model and employ multi-stage selection procedures to identify microlensing candidates. From more than 25,000 variable candidates detected across all nights, we identify 12 microlensing candidates with li...</div>
+  <div class="paper-cats"><span>astro-ph.CO</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05840v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05840v1">PDF</a> <a href="https://www.semanticscholar.org/paper/ea590ec48689dc348ebece8e3c0195a2e2ae7366">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05804v1">Momentum-conserving self-gravity in the phantom smoothed particle hydrodynamics code. Parallel dual tree traversal for the symmetric fast multipole method</a></div>
+  <div class="paper-meta">Yann Bernard, Timothée David-Cléris, Daniel J. Price, Mike Y. M. Lau &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Tree codes that approximate groups of distant particles with multipole expansions are the standard way to accelerate the computation of self-gravity on particles. While momentum-conserving fast multipole methods exist, parallelisation is non-trivial and previous implementations have been limited to self-gravity with fixed softening lengths. We aim for a practical, parallel version of Dehnen's momentum-conserving Cartesian fast multipole method for the computation of the gravitational force in sm...</div>
+  <div class="paper-cats"><span>astro-ph.IM</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05804v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05804v1">PDF</a> <a href="https://www.semanticscholar.org/paper/e30e52bdbc59b0847e73cd4141831bf1ce285a5b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05681v1">A Stronger Benchmark for Online Bilateral Trade: From Fixed Prices to Distributions</a></div>
+  <div class="paper-meta">Anna Lunghi, Mattia Piccinato, Matteo Castiglioni, Alberto Marchesi &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We study online bilateral trade, where a learner facilitates repeated exchanges between a buyer and a seller to maximize the Gain From Trade (GFT), i.e., the social welfare. In doing so, the learner must guarantee not to subsidize the market. This constraint is usually imposed per round through Weak Budget Balance (WBB). Despite that, Bernasconi et al. [2024] show that a Global Budget Balance (GBB) constraint on the profit -- enforced over the entire time horizon -- can improve the GFT by a mult...</div>
+  <div class="paper-cats"><span>cs.GT</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05681v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05681v1">PDF</a> <a href="https://www.semanticscholar.org/paper/fb04ca92bff03a082ea3a17dc37496d2991d5772">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05680v1">Heteroclinic connections between finite-amplitude periodic orbits emerging from a codimension two singularity</a></div>
+  <div class="paper-meta">Thomas J. Bridges, David J. B. Lloyd, Daniel J. Ratliff, Patrick Sprenger &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Heteroclinic connections between two distinct hyperbolic periodic orbits in conservative systems are important in a wide range of applications. On the other hand, it is theoretically challenging to find large amplitude connections from scratch and compute them numerically. In this paper, we use a codimension two singularity, in a family of periodic orbits, as an organizing center for the emergence of heteroclinic connections. A normal form is derived whose unfolding produces two distinct finite ...</div>
+  <div class="paper-cats"><span>math.DS</span><span>nlin.PS</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05680v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05680v1">PDF</a> <a href="https://www.semanticscholar.org/paper/0fdf89e5478d4c26080f7183408731de600ad216">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05654v1">Groups and Inverse Semigroups in Lambda Calculus</a></div>
+  <div class="paper-meta">Antonio Bucciarelli, Arturo De Faveri, Giulio Manzonetto, Antonino Salibra &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We study invertibility of $λ$-terms modulo $λ$-theories. Here a fundamental role is played by a class of $λ$-terms called finite hereditary permutations (FHP) and by their infinite generalisations (HP). More precisely, FHPs are the invertible elements in the least extensional $λ$-theory $λη$ and HPs are those in the greatest sensible $λ$-theory $H^*$. Our approach is based on inverse semigroups, algebraic structures that generalise groups and semilattices. We show that FHP modulo a $λ$-theory $T...</div>
+  <div class="paper-cats"><span>cs.LO</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05654v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05654v1">PDF</a> <a href="https://www.semanticscholar.org/paper/1cf57ba4cfdf876033d0210eff0503be6d1ebf18">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05960v1">The Multicolor Induced Size-Ramsey Number of Long Subdivisions</a></div>
+  <div class="paper-meta">Ramin Javadi, Yoshiharu Kohayakawa, Meysam Miralaei &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">For a positive integer $k$ and a graph $H$, the $k$-color induced size-Ramsey number \linebreak $\widehat{R}_{\mathrm{ind}}(H, k)$ is the minimum integer $m$ for which there exists a graph $G$ with $m$ edges such that for every $k$-edge coloring of $G$, the graph $G$ contains a monochromatic copy of $H$ as an induced subgraph. For a graph $H$ with the edge set $E(H)$ and a function $σ:E(H)\to \mathbb{N}$, the subdivision $H^σ$ is obtained by replacing each $e \in E(H)$ with a path of length $σ(e...</div>
+  <div class="paper-cats"><span>math.CO</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05960v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05960v1">PDF</a> <a href="https://www.semanticscholar.org/paper/1680bf59da03bdadf9df1c09e63bd5346fb9a34a">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05950v1">Breaking Symmetry Bottlenecks in GNN Readouts</a></div>
+  <div class="paper-meta">Mouad Talhi, Arne Wolf, Anthea Monod &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Graph neural networks (GNNs) are widely used for learning on structured data, yet their ability to distinguish non-isomorphic graphs is fundamentally limited. These limitations are usually attributed to message passing; in this work we show that an independent bottleneck arises at the readout stage. Using finite-dimensional representation theory, we prove that all linear permutation-invariant readouts, including sum and mean pooling, factor through the Reynolds (group-averaging) operator and the...</div>
+  <div class="paper-cats"><span>cs.LG</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05950v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05950v1">PDF</a> <a href="https://www.semanticscholar.org/paper/10966344b8b24d9bc770b678d19f58f646714d72">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05932v1">Polyglots or Multitudes? Multilingual LLM Answers to Value-laden Multiple-Choice Questions</a></div>
+  <div class="paper-meta">Léo Labat, Etienne Ollion, François Yvon &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Multiple-Choice Questions (MCQs) are often used to assess knowledge, reasoning abilities, and even values encoded in large language models (LLMs). While the effect of multilingualism has been studied on LLM factual recall, this paper seeks to investigate the less explored question of language-induced variation in value-laden MCQ responses. Are multilingual LLMs consistent in their responses across languages, i.e. behave like theoretical polyglots, or do they answer value-laden MCQs depending on ...</div>
+  <div class="paper-cats"><span>cs.CL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05932v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05932v1">PDF</a> <a href="https://www.semanticscholar.org/paper/be6055e03d4d35ca7b1a46b67f5a3802898266d9">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05928v1">Even Faster Geosocial Reachability Queries</a></div>
+  <div class="paper-meta">Rick van der Heijden, Nikolay Yakovets, Thekla Hamm &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Geosocial reachability queries (\textsc{RangeReach}) determine whether a given vertex in a geosocial network can reach any spatial vertex within a query region. The state-of-the-art 3DReach method answers such queries by encoding graph reachability through interval labelling and indexing spatial vertices in a 3D R-tree. We present 2DReach, a simpler approach that avoids interval labelling entirely. Like 3DReach, 2DReach collapses strongly connected components (SCCs) into a DAG, but instead of co...</div>
+  <div class="paper-cats"><span>cs.DB</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05928v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05928v1">PDF</a> <a href="https://www.semanticscholar.org/paper/1a1b6fdb5a91e204c9eb635b3ea0f4bd688cffd4">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05867v1">The Case of the Mysterious Citations</a></div>
+  <div class="paper-meta">Amanda Bienz, Carl Pearson, Simon Garcia de Gonzalo &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Mysterious citations are routinely appearing in peer-reviewed publications throughout the scientific community. In this paper, we developed an automated pipeline and examine the proceedings of four major high-performance computing conferences, comparing the accuracy of citations between the 2021 and 2025 proceedings. While none of the 2021 papers contained mysterious citations, every 2025 proceeding did, impacting 2-6\% of published papers. In addition, we observe a sharp rise in paper title and...</div>
+  <div class="paper-cats"><span>cs.DL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05867v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05867v1">PDF</a> <a href="https://www.semanticscholar.org/paper/9d67b66b921b63946c6f3cb5eddee68fe680571b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05790v1">Price of universality in vector quantization is at most 0.11 bit</a></div>
+  <div class="paper-meta">Alina Harbuzova, Or Ordentlich, Yury Polyanskiy &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Fast computation of a matrix product $W^\top X$ is a workhorse of modern LLMs. To make their deployment more efficient, a popular approach is that of using a low-precision approximation $\widehat W$ in place of true $W$ ("weight-only quantization''). Information theory demonstrates that an optimal algorithm for reducing precision of $W$ depends on the (second order) statistics of $X$ and requires a careful alignment of vector quantization codebook with PCA directions of $X$ (a process known as "...</div>
+  <div class="paper-cats"><span>cs.IT</span><span>cs.LG</span><span>stat.ML</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05790v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05790v1">PDF</a> <a href="https://www.semanticscholar.org/paper/598f0dbc5e36e51089c8a2fcc3d6e76b00f47616">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05733v1">The resurgence of errors in the localization of $\mathcal{N} = 2$ superconformal Yang-Mills</a></div>
+  <div class="paper-meta">Inês Aniceto, James Ratcliffe, Itamar Yaakov &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We give a physical interpretation for the analytic continuation of the partition function of superconformal SU$(2)$ $\mathcal{N}=2$ gauge theory on the four-sphere to all values of the Yang-Mills coupling. We show that a well-motivated 2d construction associates two-dimensional unstable instantons to the 4d complex saddles which appear as singularities in the integrand of the supersymmetric localization expression. The construction is based on the chiral algebra subsector, and aligns with the al...</div>
+  <div class="paper-cats"><span>hep-th</span><span>math-ph</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05733v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05733v1">PDF</a> <a href="https://www.semanticscholar.org/paper/5ba3b9776a5fd408ecf4407d6b108c696c5ead66">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05693v1">FedRandom: Sampling Consistent and Accurate Contribution Values in Federated Learning</a></div>
+  <div class="paper-meta">Arno Geimer, Beltran Fiz Pontiveros, Radu State &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Federated Learning is a privacy-preserving decentralized approach for Machine Learning tasks. In industry deployments characterized by a limited number of entities possessing abundant data, the significance of a participant's role in shaping the global model becomes pivotal given that participation in a federation incurs costs, and participants may expect compensation for their involvement. Additionally, the contributions of participants serve as a crucial means to identify and address potential...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.DC</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05693v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05693v1">PDF</a> <a href="https://www.semanticscholar.org/paper/a35cded89352c87bb45939a4ff46feb20bf66c4d">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.06006v1">Computing Diffusion Geometry</a></div>
+  <div class="paper-meta">Iolo Jones, David Lanners &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Calculus and geometry are ubiquitous in the theoretical modelling of scientific phenomena, but have historically been very challenging to apply directly to real data as statistics. Diffusion geometry is a new theory that reformulates classical calculus and geometry in terms of a diffusion process, allowing these theories to generalise beyond manifolds and be computed from data. This work introduces a new computational framework for diffusion geometry that substantially broadens its practical sco...</div>
+  <div class="paper-cats"><span>math.DG</span><span>math.AT</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.06006v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.06006v1">PDF</a> <a href="https://www.semanticscholar.org/paper/4790292cc46b4a99a8826395c80bb1b99474b5a3">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05903v1">Verification of the Implicit World Model in a Generative Model via Adversarial Sequences</a></div>
+  <div class="paper-meta">András Balogh, Márk Jelasity &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Generative sequence models are typically trained on sample sequences from natural or formal languages. It is a crucial question whether -- or to what extent -- sample-based training is able to capture the true structure of these languages, often referred to as the ``world model''. Theoretical results indicate that we can hope for soundness at best, that is, generating valid sequences, but not necessarily all of them. However, it is still important to have practical tools that are able to verify ...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05903v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05903v1">PDF</a> <a href="https://www.semanticscholar.org/paper/9851c64125223a5df0fafbd513a290edb8c49a18">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05895v1">Residual Reinforcement Learning for Waste-Container Lifting Using Large-Scale Cranes with Underactuated Tools</a></div>
+  <div class="paper-meta">Qi Li, Karsten Berns &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">This paper studies the container lifting phase of a waste-container recycling task in urban environments, performed by a hydraulic loader crane equipped with an underactuated discharge unit, and proposes a residual reinforcement learning (RRL) approach that combines a nominal Cartesian controller with a learned residual policy. All experiments are conducted in simulation, where the task is characterized by tight geometric tolerances between the discharge-unit hooks and the container rings relati...</div>
+  <div class="paper-cats"><span>cs.RO</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05895v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05895v1">PDF</a> <a href="https://www.semanticscholar.org/paper/6298a1684b22e1d04d6d2474a7869db8fe4c7a79">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05844v1">Note on the treewidth of graphs excluding a disjoint union of cycles as a minor</a></div>
+  <div class="paper-meta">Gwenaël Joret, Piotr Micek &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">For a planar graph $H$, let $f(H)$ denote the minimum integer such that all graphs excluding $H$ as a minor have treewidth at most $f(H)$. We show that if $H$ is a disjoint union of $k$ cycles then $f(H)=O(|V(H)| + k \log k)$, which is best possible.</div>
+  <div class="paper-cats"><span>math.CO</span><span>cs.DM</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05844v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05844v1">PDF</a> <a href="https://www.semanticscholar.org/paper/dd390957a7eaab435196c6efc57184026da06dab">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05801v1">The Quantum Message Complexity of Distributed Wake-Up with Advice</a></div>
+  <div class="paper-meta">Peter Robinson, Ming Ming Tan &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We consider the distributed wake-up problem with advice, where nodes are equipped with initial knowledge about the network at large. After the adversary awakens a subset of nodes, an oracle computes a bit string (``the advice'') for each node, and the goal is to wake up all sleeping nodes efficiently. We present the first upper and lower bounds on the message complexity for wake-up in the quantum routing model, introduced by Dufoulon, Magniez, and Pandurangan (PODC 2025). In more detail, we give...</div>
+  <div class="paper-cats"><span>quant-ph</span><span>cs.DC</span><span>cs.DS</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05801v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05801v1">PDF</a> <a href="https://www.semanticscholar.org/paper/c8de7d5419a4995656b9a20f0a02d951a975046d">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05786v1">Selecting Hyperparameters for Tree-Boosting</a></div>
+  <div class="paper-meta">Floris Jan Koster, Fabio Sigrist &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Tree-boosting is a widely used machine learning technique for tabular data. However, its out-of-sample accuracy is critically dependent on multiple hyperparameters. In this article, we empirically compare several popular methods for hyperparameter optimization for tree-boosting including random grid search, the tree-structured Parzen estimator (TPE), Gaussian-process-based Bayesian optimization (GP-BO), Hyperband, the sequential model-based algorithm configuration (SMAC) method, and deterministi...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>stat.AP</span><span>stat.ML</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05786v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05786v1">PDF</a> <a href="https://www.semanticscholar.org/paper/a18d759da5de11f0a68edb539e2b80535996befb">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05768v1">An Erdős problem on random subset sums in finite abelian groups</a></div>
+  <div class="paper-meta">Jie Ma, Quanyu Tang &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Let $f(N)$ denote the least integer $k$ such that, if $G$ is an abelian group of order $N$ and $A \subseteq G$ is a uniformly random $k$-element subset, then with probability at least $\tfrac12$ the subset-sum set $\{ \sum_{x \in S} x : S \subseteq A \}$ equals $G$. In 1965, Erdős and Rényi proved that for all $N$, $$ f(N) \le \log_2 N + \left(\frac{1}{\log 2}+o(1)\right)\log\log N. $$ Erdős later conjectured that this bound cannot be improved to $f(N)\le \log_2 N+o(\log\log N)$. In this paper w...</div>
+  <div class="paper-cats"><span>math.CO</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05768v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05768v1">PDF</a> <a href="https://www.semanticscholar.org/paper/be145ace9dd1c5c6375859ce2a96643913042677">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05756v1">Minimal Equicontinuous Actions on Stone Spaces</a></div>
+  <div class="paper-meta">María Isabel Cortez, Till Hauser &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">In this article we study minimal equicontinuous actions on Stone spaces, which we call \emph{subodometers}, and do neither assume that the space is metrizable, nor any assumptions on the acting group. We show that the set of eigenvalues is a complete invariant for subodometers. Furthermore, we characterize minimal rotations on Stone spaces, which we call \emph{odometers}, via the intersection stability of their sets of eigenvalues. We show that any non-empty family of odometers allows for a mini...</div>
+  <div class="paper-cats"><span>math.DS</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05756v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05756v1">PDF</a> <a href="https://www.semanticscholar.org/paper/badc8cec61896e0a47bee5a5c69cea70e41eb4db">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05750v1">The 2-Dimensional Dual of $φ^4$ in AdS$_3$</a></div>
+  <div class="paper-meta">Weichen Xiao, Ivo Sachs &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">We study the correlation functions of a conformally coupled $φ^4$-interacting theory in AdS$_3$ and its dual CFT$_2$. The one-loop diagram is not expressible in terms of known transcendental functions, but is shown to be expressible as an infinite sum of previously well-studied tree-level diagrams, and we compute this sum using several number-theoretic conjectures. This enables us to extract recursively, the analytic expressions of anomalous dimensions of all dual double-trace operators. In the ...</div>
+  <div class="paper-cats"><span>hep-th</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05750v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05750v1">PDF</a> <a href="https://www.semanticscholar.org/paper/d8ba830a8f67f02f5221769df109795a0f8d7c48">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05939v1">"It from Bit": The Hartle-Hawking state and quantum mechanics for de Sitter observers</a></div>
+  <div class="paper-meta">Ying Zhao &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">The one-state statement for closed universes has sparked considerable discussion. In this paper we examine its physical meaning in the context of the Hartle-Hawking state and de Sitter space. We argue that the one-state property of closed universes is fully compatible with the finite-dimensional quantum mechanics experienced by observers inside de Sitter space, and that this compatibility requires neither mixing of alpha sectors nor any modification of the rules of the gravitational path integra...</div>
+  <div class="paper-cats"><span>hep-th</span><span>gr-qc</span><span>quant-ph</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05939v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05939v1">PDF</a> <a href="https://www.semanticscholar.org/paper/f1399c488b8f555d0bc42dafbae60761cbd9fec3">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05930v1">Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025</a></div>
+  <div class="paper-meta">Samar Ansari &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Large language models (LLMs) are increasingly used in academic writing workflows, yet they frequently hallucinate by generating citations to sources that do not exist. This study analyzes 100 AI-generated hallucinated citations that appeared in papers accepted by the 2025 Conference on Neural Information Processing Systems (NeurIPS), one of the world's most prestigious AI conferences. Despite review by 3-5 expert researchers per paper, these fabricated citations evaded detection, appearing in 53...</div>
+  <div class="paper-cats"><span>cs.DL</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05930v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05930v1">PDF</a> <a href="https://www.semanticscholar.org/paper/0386e43a3899448ca1a427edaff586c8de82e70b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05920v1">Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem</a></div>
+  <div class="paper-meta">Eva Andrés &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">This paper addresses the Capacitated Vehicle Routing Problem (CVRP) by comparing classical and quantum Reinforcement Learning (RL) approaches. An Advantage Actor-Critic (A2C) agent is implemented in classical, full quantum, and hybrid variants, integrating transformer architectures to capture the relationships between vehicles, clients, and the depot through self- and cross-attention mechanisms. The experiments focus on multi-vehicle scenarios with capacity constraints, considering 20 clients an...</div>
+  <div class="paper-cats"><span>cs.AI</span><span>cs.ET</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05920v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05920v1">PDF</a> <a href="https://www.semanticscholar.org/paper/05978a8f69fb91a45e441f7f5a560e9f48624645">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05719v1">Finite energy subspace for time-periodic Schrödinger operators</a></div>
+  <div class="paper-meta">Erik Skibsted &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">For $N$-body Schrö\-dinger operators with   time-periodic short-range pair-potentials we show by a time-dependent commutator method that all channel wave operators   exist. For $N=2$ we prove asymptotic completeness by a simplified version of the method, recovering Yajima's completeness result \cite{Yaj1} proven by a stationary method.   We propose a definition of a \emph{finite energy   subspace}, intuitively consisting of states with `finite asymptotic energy'. This   geometric notion is used ...</div>
+  <div class="paper-cats"><span>math.SP</span><span>math-ph</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05719v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05719v1">PDF</a> <a href="https://www.semanticscholar.org/paper/a410127b29fd109917b002413647b8b4b94e609b">Semantic Scholar</a></div>
+</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05656v1">Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation</a></div>
+  <div class="paper-meta">Igor Santos-Grueiro &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In practice, alignment is inferred from performance under finite evaluation protocols - benchmarks, red-teaming suites, or automated pipelines - and observed compliance is often treated as evidence of underlying alignment. This inference step, from behavioral evidence to claims about latent alignment properties, is typically implicit and rarely analyzed as an inference problem in its own right...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05656v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05656v1">PDF</a> <a href="https://www.semanticscholar.org/paper/d175e75e9444b1a527e744a38081fc5ad1745dc5">Semantic Scholar</a></div>
+</div>
+</div>
+<div class="topic"><div class="topic-header">Prompt Injection & Jailbreaking (1)</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05746v1">Learning to Inject: Automated Prompt Injection via Reinforcement Learning</a></div>
+  <div class="paper-meta">Xin Chen, Jie Zhang, Florian Tramer &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Prompt injection is one of the most critical vulnerabilities in LLM agents; yet, effective automated attacks remain largely unexplored from an optimization perspective. Existing methods heavily depend on human red-teamers and hand-crafted prompts, limiting their scalability and adaptability. We propose AutoInject, a reinforcement learning framework that generates universal, transferable adversarial suffixes while jointly optimizing for attack success and utility preservation on benign tasks. Our...</div>
+  <div class="paper-cats"><span>cs.LG</span><span>cs.AI</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05746v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05746v1">PDF</a> <a href="https://www.semanticscholar.org/paper/f3a1695cd2de9a1561a96fa0da3cdf9adb388b47">Semantic Scholar</a></div>
+</div>
+</div>
+<div class="topic"><div class="topic-header">AI Safety & Robustness (1)</div>
+<div class="paper">
+  <div class="paper-title"><a href="https://arxiv.org/abs/2602.05758v1">LongR: Unleashing Long-Context Reasoning via Reinforcement Learning with Dense Utility Rewards</a></div>
+  <div class="paper-meta">Bowen Ping, Zijun Chen, Yiyao Yu, Tingfeng Hui, Junchi Yan + 1 more &middot; 2026-02-05</div>
+  <div class="paper-citations"><span class="badge badge-new">New</span></div>
+  <div class="paper-abstract">Reinforcement Learning has emerged as a key driver for LLM reasoning. This capability is equally pivotal in long-context scenarios--such as long-dialogue understanding and structured data analysis, where the challenge extends beyond consuming tokens to performing rigorous deduction. While existing efforts focus on data synthesis or architectural changes, recent work points out that relying solely on sparse, outcome-only rewards yields limited gains, as such coarse signals are often insufficient ...</div>
+  <div class="paper-cats"><span>cs.CL</span></div>
+  <div class="paper-links"><a href="https://arxiv.org/abs/2602.05758v1">ArXiv</a> <a href="https://arxiv.org/pdf/2602.05758v1">PDF</a> <a href="https://www.semanticscholar.org/paper/cff268553f20ddfc83465ac237b9fc6718877009">Semantic Scholar</a></div>
+</div>
+</div>
+
+<div class="footer">
+  Updated daily via GitHub Actions &middot;
+  Papers from <a href="https://arxiv.org">arxiv.org</a> &middot;
+  Citations from <a href="https://www.semanticscholar.org">Semantic Scholar</a><br>
+  Subscribe via <a href="https://ek0212.github.io/arxiv-ai-security-digest/feed.xml">RSS</a>
+</div>
+</body>
+</html>

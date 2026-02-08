@@ -731,36 +731,53 @@ a:hover { text-decoration: underline; }
         send_buttondown(buttondown_key, papers_html, date_str, total, css)
 
 
+def xml_escape(text: str) -> str:
+    """Escape text for safe inclusion in XML."""
+    return (text
+            .replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+            .replace("'", "&apos;"))
+
+
 def generate_rss(papers_by_topic, sorted_topics, date_str, iso_date):
     """Generate RSS 2.0 feed."""
     now_rfc822 = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
 
     items = ""
     for topic, papers in sorted_topics.items():
+        topic_escaped = xml_escape(topic)
         for p in papers:
-            abstract_short = p["abstract"][:300].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            abstract_short = p["abstract"][:300]
             if len(p["abstract"]) > 300:
                 abstract_short += "..."
-            title_escaped = p["title"].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            abstract_escaped = xml_escape(abstract_short)
+            title_escaped = xml_escape(p["title"])
             cc = p.get("citation_count", 0)
+            rs = p.get("relevance_score", 0)
             cite_note = f" [{cc} citations]" if cc > 0 else ""
+            rel_note = f" [rel:{rs}]"
 
             items += f"""    <item>
-      <title>[{topic}]{cite_note} {title_escaped}</title>
+      <title>[{topic_escaped}]{cite_note}{rel_note} {title_escaped}</title>
       <link>{p['arxiv_url']}</link>
       <guid isPermaLink="true">{p['arxiv_url']}</guid>
-      <description>{abstract_short}</description>
+      <description>{abstract_escaped}</description>
       <pubDate>{now_rfc822}</pubDate>
-      <category>{topic}</category>
+      <category>{topic_escaped}</category>
     </item>
 """
+
+    title_escaped = xml_escape(SITE_TITLE)
+    desc_escaped = xml_escape(SITE_DESCRIPTION)
 
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{SITE_TITLE}</title>
+    <title>{title_escaped}</title>
     <link>{SITE_URL}</link>
-    <description>{SITE_DESCRIPTION}</description>
+    <description>{desc_escaped}</description>
     <language>en-us</language>
     <lastBuildDate>{now_rfc822}</lastBuildDate>
     <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>

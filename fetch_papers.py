@@ -35,6 +35,8 @@ SEARCH_QUERIES = {
         "blue team",
         "adversarial testing",
         "AI safety evaluation",
+        "PyRIT",
+        "automated red teaming",
     ],
     "Prompt Injection & Jailbreaking": [
         "prompt injection",
@@ -52,6 +54,8 @@ SEARCH_QUERIES = {
         "LLM attack",
         "adversarial prompt",
         "AI vulnerability",
+        "data leakage LLM",
+        "generative AI security",
     ],
     "Model Poisoning & Backdoors": [
         "model poisoning",
@@ -77,6 +81,45 @@ SEARCH_QUERIES = {
         "content filter bypass",
         "AI alignment",
         "responsible AI",
+        "technical guardrail",
+    ],
+    "AI Ethics & Governance": [
+        "AI ethics",
+        "AI governance",
+        "responsible AI",
+        "AI accountability",
+        "algorithmic fairness",
+        "AI regulation",
+        "AI oversight",
+        "ethical AI",
+        "AI transparency",
+        "AI audit",
+    ],
+    "Sector-Specific AI Risks": [
+        "financial AI risk",
+        "AI financial services",
+        "LLM finance",
+        "AI manipulation",
+        "manipulative AI",
+        "AI advisory risk",
+        "healthcare AI security",
+        "AI fraud detection",
+        "deepfake finance",
+        "AI compliance",
+    ],
+    "LLM Efficiency & Optimization": [
+        "LLM inference optimization",
+        "KV cache",
+        "LLM caching",
+        "model compression",
+        "speculative decoding",
+        "LLM efficiency",
+        "token pruning",
+        "model distillation",
+        "quantization LLM",
+        "attention optimization",
+        "GenCache",
+        "structural pattern matching LLM",
     ],
     "Benchmarking & Evaluation": [
         "LLM benchmark security",
@@ -122,6 +165,76 @@ SEARCH_QUERIES = {
     ],
 }
 
+# ---------------------------------------------------------------------------
+# Relevance scoring
+# ---------------------------------------------------------------------------
+
+# High-value keywords: (phrase, weight)
+# Title matches get 3x the weight of abstract matches.
+RELEVANCE_KEYWORDS = [
+    # Red teaming & automated security testing (weight 10)
+    ("red teaming", 10), ("red team", 10), ("blue teaming", 10), ("blue team", 10),
+    ("PyRIT", 10), ("automated red team", 10), ("adversarial testing", 8),
+
+    # Jailbreaking & prompt injection (weight 10)
+    ("jailbreak", 10), ("prompt injection", 10), ("guardrail bypass", 10),
+    ("indirect prompt injection", 10), ("XPIA", 10), ("safety bypass", 9),
+
+    # Generative AI security (weight 9)
+    ("generative AI security", 9), ("LLM security", 9), ("LLM attack", 9),
+    ("LLM vulnerability", 9), ("large language model security", 9),
+    ("adversarial prompt", 8), ("data leakage", 8),
+
+    # Model poisoning & backdoors (weight 8)
+    ("model poisoning", 8), ("backdoor attack", 8), ("sleeper agent", 8),
+    ("trojan model", 8), ("data poisoning", 8), ("training data attack", 8),
+
+    # Agentic AI (weight 9)
+    ("agentic AI", 9), ("AI agent security", 9), ("agent hijacking", 9),
+    ("multi-agent security", 8), ("tool-use vulnerability", 8),
+
+    # AI safety & guardrails (weight 8)
+    ("AI safety", 8), ("safety guardrail", 8), ("content filter", 7),
+    ("AI alignment", 7), ("robustness", 6), ("responsible AI", 7),
+
+    # Ethics & governance (weight 7)
+    ("AI ethics", 7), ("AI governance", 7), ("AI accountability", 7),
+    ("algorithmic fairness", 6), ("AI regulation", 7), ("AI oversight", 7),
+    ("AI audit", 7), ("AI transparency", 6),
+
+    # Financial / sector risks (weight 8)
+    ("financial AI", 8), ("AI financial services", 8), ("manipulative", 7),
+    ("AI advisory", 7), ("AI fraud", 7), ("deepfake", 7), ("AI compliance", 7),
+
+    # LLM efficiency & optimization (weight 7)
+    ("KV cache", 7), ("LLM caching", 7), ("inference optimization", 7),
+    ("model compression", 6), ("speculative decoding", 7), ("GenCache", 8),
+    ("token pruning", 6), ("model distillation", 6), ("quantization", 5),
+    ("attention optimization", 6),
+
+    # Network & OS security (weight 5)
+    ("intrusion detection", 5), ("DDoS", 5), ("zero trust", 5),
+    ("kernel security", 5), ("privilege escalation", 5), ("container security", 5),
+    ("supply chain attack", 6), ("malware detection", 5),
+]
+
+
+def compute_relevance(paper: dict) -> int:
+    """Score a paper 0-100 based on keyword matches in title and abstract."""
+    title = paper.get("title", "").lower()
+    abstract = paper.get("abstract", "").lower()
+    score = 0
+
+    for phrase, weight in RELEVANCE_KEYWORDS:
+        phrase_lower = phrase.lower()
+        if phrase_lower in title:
+            score += weight * 3  # title matches worth 3x
+        if phrase_lower in abstract:
+            score += weight
+
+    # Cap at 100
+    return min(score, 100)
+
 LOOKBACK_DAYS = int(os.environ.get("LOOKBACK_DAYS", "7"))
 MAX_RESULTS_PER_QUERY = int(os.environ.get("MAX_RESULTS", "50"))
 SEEN_PAPERS_FILE = Path("seen_papers.json")
@@ -134,8 +247,8 @@ SITE_URL = os.environ.get("SITE_URL", "https://ek0212.github.io/arxiv-ai-securit
 SITE_DESCRIPTION = os.environ.get(
     "SITE_DESCRIPTION",
     "Daily digest of ArXiv papers on AI security, red/blue teaming, prompt injection, "
-    "jailbreaking, model poisoning, network security, and OS security. "
-    "Sorted by citation count."
+    "jailbreaking, model poisoning, AI ethics, LLM efficiency, sector-specific risks, "
+    "network security, and OS security. Sorted by relevance and citation count."
 )
 
 ARXIV_API = "http://export.arxiv.org/api/query"
@@ -308,10 +421,17 @@ def enrich_with_citations(papers: list[dict]) -> list[dict]:
     return papers
 
 
-def sort_papers_by_citations(papers: list[dict]) -> list[dict]:
+def score_and_sort_papers(papers: list[dict]) -> list[dict]:
+    """Score each paper for relevance, then sort by relevance first, citations second."""
+    for p in papers:
+        p["relevance_score"] = compute_relevance(p)
     return sorted(
         papers,
-        key=lambda p: (p.get("influential_citations", 0), p.get("citation_count", 0), len(p.get("authors", []))),
+        key=lambda p: (
+            p.get("relevance_score", 0),
+            p.get("influential_citations", 0),
+            p.get("citation_count", 0),
+        ),
         reverse=True,
     )
 
@@ -356,17 +476,34 @@ def save_seen(seen: set):
 # HTML generation (GitHub Pages site)
 # ---------------------------------------------------------------------------
 
-def citation_badge_html(paper: dict) -> str:
+def metrics_badge_html(paper: dict) -> str:
+    """Render relevance score and citation count as visible badges."""
+    parts = []
+
+    # Relevance score badge
+    rs = paper.get("relevance_score", 0)
+    if rs >= 50:
+        rs_cls = "badge-relevance-high"
+    elif rs >= 25:
+        rs_cls = "badge-relevance-med"
+    elif rs > 0:
+        rs_cls = "badge-relevance-low"
+    else:
+        rs_cls = "badge-relevance-none"
+    parts.append(f'<span class="badge {rs_cls}">Relevance: {rs}/100</span>')
+
+    # Citation count badge
     cc = paper.get("citation_count", 0)
     ic = paper.get("influential_citations", 0)
     if cc == 0 and ic == 0:
-        return '<span class="badge badge-new">New</span>'
-    parts = []
-    if cc > 0:
-        cls = "badge-high" if cc >= 10 else "badge-med" if cc >= 3 else "badge-low"
-        parts.append(f'<span class="badge {cls}">{cc} cited</span>')
-    if ic > 0:
-        parts.append(f'<span class="badge badge-influential">{ic} influential</span>')
+        parts.append('<span class="badge badge-new">Citations: 0 (new)</span>')
+    else:
+        if cc > 0:
+            cls = "badge-high" if cc >= 10 else "badge-med" if cc >= 3 else "badge-low"
+            parts.append(f'<span class="badge {cls}">Citations: {cc}</span>')
+        if ic > 0:
+            parts.append(f'<span class="badge badge-influential">{ic} influential</span>')
+
     return " ".join(parts)
 
 
@@ -419,6 +556,10 @@ a:hover { text-decoration: underline; }
 .badge-med { background: var(--yellow-bg); color: var(--yellow); }
 .badge-high { background: var(--green-bg); color: var(--green); }
 .badge-influential { background: var(--orange-bg); color: var(--orange); }
+.badge-relevance-high { background: #e3f2fd; color: #0d47a1; }
+.badge-relevance-med { background: #e8eaf6; color: #283593; }
+.badge-relevance-low { background: #f3e5f5; color: #6a1b9a; }
+.badge-relevance-none { background: #f0f0f0; color: #999; }
 .paper-abstract { font-size: 13px; color: #333; }
 .paper-cats { font-size: 11px; color: #888; margin-top: 8px; }
 .paper-cats span { background: var(--accent-light); padding: 2px 8px; border-radius: 4px;
@@ -448,7 +589,7 @@ a:hover { text-decoration: underline; }
                 abstract_short = p["abstract"][:500]
                 if len(p["abstract"]) > 500:
                     abstract_short += "..."
-                badge = citation_badge_html(p)
+                badge = metrics_badge_html(p)
                 links = f'<a href="{p["arxiv_url"]}">ArXiv</a>'
                 if p.get("pdf_url"):
                     links += f' <a href="{p["pdf_url"]}">PDF</a>'
@@ -466,8 +607,8 @@ a:hover { text-decoration: underline; }
             html += "</div>\n"
         return html
 
-    # Sort papers within each topic
-    sorted_topics = {t: sort_papers_by_citations(ps) for t, ps in papers_by_topic.items()}
+    # Score and sort papers within each topic (relevance first, then citations)
+    sorted_topics = {t: score_and_sort_papers(ps) for t, ps in papers_by_topic.items()}
     papers_html = render_papers_html(sorted_topics)
 
     if total == 0:
@@ -498,7 +639,7 @@ a:hover { text-decoration: underline; }
   <a href="{SITE_URL}/archive/">Archive</a>
 </nav>
 <div class="sort-note">
-  Sorted by citation count via Semantic Scholar. New uncited papers appear last in each section.
+  Sorted by relevance score (keyword match to priority topics), then by citation count via Semantic Scholar.
 </div>
 {papers_html}
 <div class="footer">
